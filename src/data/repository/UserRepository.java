@@ -8,8 +8,9 @@ public class UserRepository {
     private final HashMap<String, User> userDB = new HashMap<>();
 
     public User save(User user){
-        if (!userDB.containsKey(user.getEmail())) userDB.put(user.getEmail(), user);
-        else throw new RuntimeException("Email already exists, choose another email");
+
+        userDB.put(user.getEmail(), user);
+
         return user;
     }
 
