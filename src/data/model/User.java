@@ -1,5 +1,7 @@
 package data.model;
 
+import data.repository.UserRepository;
+
 public class User {
     private String firstName;
     private String lastName;
@@ -48,8 +50,9 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) {
+    public User setPassword(String password) {
         this.password = password;
+        return null;
     }
 
     public String getPhoneNumber() {
